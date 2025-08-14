@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>shop</title>
+  <script type="module" src="./assets/js/main.js"></script>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo"><img src="./assets/img/logo-min.svg" alt="logo"></a>
+				<div class="header__action">
+					<div class="search-bar">
+						<input type="text" placeholder="search" class="js-input-search">
+						<button type="button">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<circle cx="11" cy="11" r="8"></circle>
+								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+							</svg>
+						</button>
+					</div>
+					<div class="header__cart">
+						<span class="shopping-cart js-cart-icon js-cart-btn">
+							<!-- <span class="counter js-cart-current-count">1</span> -->
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 20">
+								<path
+									d="M4.258 0c.45 0 .842.31.944.738l.749 2.649h15.132a.972.972 0 01.945 1.207L20.21 11.94a.973.973 0 01-.945.74H7.643a.973.973 0 01-.947-.748l.005.017L3.503 1.947H.973A.973.973 0 01.973 0h3.285zM19.84 5.334H6.497l1.895 5.398h10.113l1.335-5.398zM8.857 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.716-2.716 2.719 2.719 0 012.716-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45zM17.901 13.699a2.719 2.719 0 012.715 2.717 2.719 2.719 0 01-2.715 2.716 2.719 2.719 0 01-2.715-2.716 2.719 2.719 0 012.715-2.717zm0 1.491a1.225 1.225 0 100 2.45 1.225 1.225 0 000-2.45z" />
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+
+			<div class="cart-modal">
+				<div class="overlay js-overlay js-close-cart"></div>
+				<div class="cart js-cart">
+					<span class="close js-close-modal js-close-cart"></span>
+					<div class="cart__wrapper">
+
+						<div class="cart__empty-container js-cart-empty-container">
+							<div class="cart__empty">Your cart is empty</div>
+							<div class="cart__icon icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+									<path
+										d="M24 3l-.743 2h-1.929l-3.474 12h-13.239l-4.615-11h16.812l-.564 2h-13.24l2.937 7h10.428l3.432-12h4.195zm-15.5 15c-.828 0-1.5.672-1.5 1.5 0 .829.672 1.5 1.5 1.5s1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.9-7-1.9 7c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5z" />
+								</svg>
+							</div>
+						</div>
+
+						<div class="cart__order-container js-cart-order-container">
+							<div class="cart__order ">Your order</div>
+							<form action="server.php" method="POST" class="cart__form ">
+								<ul class="cart__list js-cart-list">
+
+								</ul>
+								<div class="cart__total-container">
+									<h3 class="cart__title">Total</h3>
+									<div>
+										<span class="cart__total-price js-cart-total-price">14 000</span>
+										<span class="cart__currency">$</span>
+									</div>
+								</div>
+								<div class="cart__btns">
+									<button type="submit" class="cart__btn-order">Place an order</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<section id="products" class="page__products products">
+				<div class="products__container">
+
+					<div class="products__inner">
+						<ul class="products__list js-products-list">
+
+							<!-- <li class="products__item product js-product">
+								<a href="#" id="1" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/1.jpeg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 1</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">101</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="2" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/2.jpg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 2</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">102</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="3" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/2.jpg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 3</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">103</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="4" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/1.jpeg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 4</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">104</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="5" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/2.jpg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 5</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">105</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="6" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/1.jpeg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 6</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">106</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="7" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/2.jpg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 7</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">107</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="8" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/1.jpeg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 8</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">108</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li>
+
+							<li class="products__item product js-product">
+								<a href="#" id="9" class="product__link js-link-card">
+									<div class="product__image">
+										<img src="assets/img/2.jpg" alt="product" class="product__img js-image-card">
+									</div>
+									<div class="product__description">
+										<h3 class="product__title js-title-card">name № 9</h3>
+										<div class="product__text">
+											<p>description product in shop</p>
+										</div>
+									</div>
+									<div class="product__price">
+										<span class="product__price-span js-price-card">109</span><span> $</span>
+									</div>
+								</a>
+								<button type="button" class="btn product__buy-btn js-buy-button">add to cart</button>
+							</li> -->
+
+
+
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<div class="pagination__container">
+				<div class="pagination js-pagination hidden">
+					<button type="button" class="pagination-btn pagination-btn-prev js-pagination-btn-prev">
+						<svg style="transform: rotate(180deg) scale(.55);" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							viewBox="0 0 24 24">
+							<path fill="#84868E" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+						</svg>
+					</button>
+					<ul class="pagination__list js-pagination-list">
+					</ul>
+					<button type="button" class=" pagination-btn pagination-btn-next js-pagination-btn-next">
+						<svg style="transform: rotate(0deg) scale(.55);" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							viewBox="0 0 24 24">
+							<path fill="#84868E" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+						</svg>
+					</button>
+				</div>
+				<button type="button" class="btn btn-show-more js-btn-show-more">Show more</button>
+			</div>
+
+		</main>
+		<footer id="footer" class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+
+		<!-- 
+		<div class="scroll-up">
+			<svg class="scroll-up__svg" xmlns="" viewBox="-2 -2 52 52">
+				<path class="scroll-up__path" d="M 24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" />
+			</svg>
+		</div> -->
+
+	</div>
+</body>
+
+</html>

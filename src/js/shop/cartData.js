@@ -73,7 +73,7 @@ const cartData = () => {
 
   const renderProductCart = (productInfo) => {
     const li = document.createElement('li');
-    li.classList.add('cart__item', 'js-cart-item');
+    li.classList.add('cart__item', 'item-cart', 'js-cart-item');
     li.innerHTML = `
       <span class="close js-remove"></span>
       <div class="item-cart__wrapper" id="${productInfo.id}">

@@ -51,9 +51,6 @@
   transform: rotate(-45deg);
 }
 //=========================
-.hidden {
-  display: none;
-}
 main {
   position: relative;
 }
@@ -77,7 +74,7 @@ main .overlay.active {
   position: fixed;
   top: 0;
   right: -400px;
-    right: 0;   ////////////////////
+  //  right: 0;   ////////////////////
   width: 400px;
   min-height: 100vh;
   max-height: 100vh;
@@ -99,6 +96,9 @@ main .overlay.active {
     display: flex;
     align-items: center;
     flex-direction: column;
+    &.hidden {
+      display: none;
+    }
   }
 
   &__empty {
@@ -115,6 +115,9 @@ main .overlay.active {
     display: flex;
     align-items: center;
     flex-direction: column;
+    &.hidden {
+      display: none;
+    }
   }
 
   &__order {
@@ -198,7 +201,8 @@ main .overlay.active {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 25px;
+    //justify-content: space-between;
   }
 
   &__image {

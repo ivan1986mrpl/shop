@@ -56,7 +56,7 @@ const paginate = (products) => {
 
   const renderBtn = (page) => {
     const li = document.createElement('li');
-    li.classList.add('pagination-item', 'row', 'jcc', 'aic');
+    li.classList.add('pagination-item');
     li.textContent = page;
 
     if (currentPage === page) {
