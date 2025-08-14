@@ -27,11 +27,6 @@ const toggleCart = (isActive) => {
 
 const openCart = () => {
   opencartButton.addEventListener('click', () => {
-    //document.body.style.overflow = 'hidden';
-    //document.body.style.marginRight = `${scroll}px`;
-    //cart.classList.add('active');
-    //overlay.classList.add('active');
-
     toggleCart(true);
   });
 };
@@ -39,11 +34,6 @@ const openCart = () => {
 const closeCart = () => {
   closeCartElements.forEach((item) => {
     item.addEventListener('click', () => {
-      //document.body.style.overflow = '';
-      //document.body.style.marginRight = '0px';
-      //cart.classList.remove('active');
-      //overlay.classList.remove('active');
-
       toggleCart(false);
     });
   });

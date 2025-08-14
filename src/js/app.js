@@ -12,7 +12,7 @@
  import menuBurger from "./modules/menu-burger";
 
  import products from "./shop/products.json";
- import { renderProductCards } from './shop/productCards.js';
+// import { renderProductCards } from './shop/productCards.js';
 // import { counterCart } from "./shop/counterCart.js";
  import { paginate } from "./shop/paginatiion.js";
  import { closeCart, openCart } from "./shop/cartPopup.js";
