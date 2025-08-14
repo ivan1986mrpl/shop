@@ -13,7 +13,10 @@
 
  import products from "./shop/products.json";
  import { renderProductCards } from './shop/productCards.js';
+// import { counterCart } from "./shop/counterCart.js";
  import { paginate } from "./shop/paginatiion.js";
+ import { closeCart, openCart } from "./shop/cartPopup.js";
+ import { cartData } from "./shop/cartData.js";
 
 
 
@@ -46,10 +49,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
  const productContainer = document.querySelector('.js-products-list');//массив с карточками товаров
  //renderProductCards(products, productContainer);
- paginate(products);
-//  openCart();
-//  closeCart();
-//  cartData();
+// counterCart();
+  paginate(products);
+  openCart();
+  closeCart();
+  cartData();
 
 
 
