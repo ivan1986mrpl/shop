@@ -4,7 +4,7 @@ const renderProductCard = ({id, photo, model, prices}) => {
   li.classList.add('products__item', 'product', 'js-product');
 
   li.innerHTML = `
-      <a href="#" data-id="${id}" class="product__link js-link-card">
+      <a href="#" id="${id}" class="product__link js-link-card">
         <div class="product__image">
           <img src="${photo[0]}" alt="product" class="product__img js-image-card">
         </div>
@@ -39,12 +39,4 @@ export {
   renderProductCards
 };
 
-
-
-
-
-
-
-
-
-// https://www.youtube.com/watch?v=YobkkHXZnPg
+// нигде не используется

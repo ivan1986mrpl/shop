@@ -63,23 +63,23 @@ body.lock {
 	}
 } */
 
-/* 
+ 
 .ibg {
 	position: relative;
 	img {
 		position: absolute;
-		inset-block-start: 0;
-		inset-inline-start: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
-		block-size: 100%;
-		inline-size: 100%;
 	}
 	&_contain {
 		img {
 			object-fit: contain;
 		}
 	}
-} */
+} 
  /* 
 .gradient-text {
 	background: var(--gradient-color);//можно использовать фото
